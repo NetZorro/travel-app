@@ -31,6 +31,7 @@ export class DBUtils {
             offsetSec: obj.offsetSec,
             weatherID: obj.weatherID,
             iso3166Alpha3 : obj.iso3166Alpha3,
+
         };
     }
 
@@ -69,7 +70,7 @@ export class DBUtils {
         try {
             let bynDataRate = 0;
 
-            if (id != '999') {
+            if (id != "999") {
                 const byn = await fetch(NBRB_CURRENCY_RATE_URL + id);
                 const bynData = await byn.json();
                 bynDataRate = bynData.Cur_OfficialRate;

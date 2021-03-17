@@ -7,6 +7,7 @@ import './app.scss';
 
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import AppConstants from "./consts/appConstants";
 import { Lang } from "./entities/interfaces";
 import LocaleContext from "./LocaleContext";
 import MainPage from "./pages/MainPage";
@@ -14,9 +15,20 @@ import CountryPage from "./pages/СountryPage";
 
 const App: React.FC = () => {
     const [language, setLanguage] = useState<Lang>("be");
+
     const [searchTerm, setSearchTerm] = useState<string>("");
 
     const { i18n } = useTranslation();
+
+    useEffect(() => {
+        const storedLanguage = localStorage.getItem(
+            AppConstants.LanguageStoreKey
+        );
+
+        if (storedLanguage && storedLanguage != language) {
+            setLanguage(storedLanguage as Lang);
+        }
+    }, []);
 
     const changeLanguage = (lang: string) => {
         i18n.changeLanguage(lang);
@@ -24,6 +36,9 @@ const App: React.FC = () => {
 
     const onLanguageChange = (lang: string) => {
         changeLanguage(lang);
+
+        localStorage.setItem(AppConstants.LanguageStoreKey, lang);
+
         setLanguage(lang as Lang);
     };
 
