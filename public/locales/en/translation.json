@@ -1,0 +1,20 @@
+{
+    "country": {
+        "name": "Republic of Belarus",
+        "capital": {
+            "name": "Minsk"
+        }
+    },
+    "placeholder" : {
+        "text" : "Search…"
+    },
+    "carrency" : {
+        "scale" : "Scale"
+    },
+    "searchResult" : {
+        "text" : "Nothing found"
+    },
+    "weather" : {
+        "error" : "No weather informatio"
+    }
+}

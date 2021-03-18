@@ -1,0 +1,13 @@
+node_modules/
+
+dist/
+
+build.js
+
+yarn.lock
+
+.vscode/
+
+.idea/
+
+.DS_Store

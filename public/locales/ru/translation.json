@@ -1,0 +1,20 @@
+{
+    "country": {
+        "name": "Республика Беларусь",
+        "capital": {
+            "name": "Минск"
+        }
+    },
+    "placeholder" : {
+        "text" : "Поиск…"
+    },
+    "carrency" : {
+        "scale" : "Едениц"
+    },
+    "searchResult" : {
+        "text" : "Ничего не найден"
+    },
+    "weather" : {
+        "error" : "Нет информации о погод"
+    }
+}
